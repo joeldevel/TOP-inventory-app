@@ -1,0 +1,69 @@
+extends layout
+
+block content
+    .header
+        h1 Art supplies inventory
+        p Does it work?
+    .side-nav
+        div
+            form
+                input(value="category_id" hidden)
+                input(type="text" value="paper" readonly)
+                button(type="submit") delete
+        div
+            form
+                input(value="category_id" hidden)
+                input(type="text" value="ink" readonly)
+                button(type="submit") delete
+        div
+            form
+                input(value="category_id" hidden)
+                input(type="text" value="erasers" readonly)
+                button(type="submit") delete
+
+        button(type="button" class="create-button") create new category
+    .main
+        button(type="button" class="create-button aright") create new product
+        div(class="product-list-table")
+            div(class="tr")
+                span(class="th") image
+                span(class="th") name
+                span(class="th") desc
+                span(class="th") price
+                span(class="th") stock
+                span(class="th")
+                span(class="th")
+            form(class="tr")
+                input(hidden value="product_id")
+                span(class="td")    
+                    img(src="images/product-placeholder.jpg" class="product-thumbnail")
+                span(class="td")
+                    input(value="pencil kohinoor 2b hardtmuth" readonly)
+                span(class="td") 
+                    input(value="a pencil ideal for sketching" readonly)
+                span(class="td") 
+                    input(value="1.0" readonly)
+                span(class="td") 
+                    input(value="1000" readonly)
+                span(class="td")
+                    a(href="update") update
+                span(class="td")
+                    a(href="delete") delete
+            form(class="tr")
+                input(hidden value="product_id")
+                span(class="td")
+                    img(src="images/product-placeholder.jpg" class="product-thumbnail")
+                span(class="td")
+                    input(value="pencil kohinoor 2b hardtmuth" readonly)
+                span(class="td") 
+                    input(value="a pencil ideal for sketching" readonly)
+                span(class="td") 
+                    input(value="1.0" readonly)
+                span(class="td") 
+                    input(value="1000" readonly)
+                span(class="td")
+                    a(href="update") update
+                span(class="td")
+                    a(href="delete") delete
+    .footer
+        p !&copy; joeldevel 1910
